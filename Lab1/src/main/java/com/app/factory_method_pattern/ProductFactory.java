@@ -1,8 +1,8 @@
-package com.app;
+package com.app.factory_method_pattern;
 
 import com.app.entities.*;
 
-class ProductFactory {
+public class ProductFactory {
     public static Product createProduct(String type) {
         return switch (type.toLowerCase()) {
             case "phone" -> new Phone();

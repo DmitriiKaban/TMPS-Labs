@@ -1,4 +1,4 @@
-package com.app;
+package com.app.builder_pattern;
 
 import com.app.entities.Product;
 

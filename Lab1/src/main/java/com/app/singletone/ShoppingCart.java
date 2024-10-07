@@ -1,4 +1,4 @@
-package com.app;
+package com.app.singletone;
 
 import com.app.entities.Product;
 

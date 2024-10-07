@@ -10,4 +10,8 @@ public class Phone extends Product {
     public void create() {
         System.out.println("Phone created.");
     }
+
+    public void display() {
+        System.out.println("Phone");
+    }
 }

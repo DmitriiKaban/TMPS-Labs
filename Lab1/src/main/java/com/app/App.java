@@ -1,8 +1,14 @@
 package com.app;
 
+import com.app.abstract_factory_pattern.ElectronicsFactory;
+import com.app.abstract_factory_pattern.NokiaFactory;
+import com.app.builder_pattern.Order;
 import com.app.entities.Laptop;
 import com.app.entities.Phone;
 import com.app.entities.Product;
+import com.app.entities.Tablet;
+import com.app.factory_method_pattern.ProductFactory;
+import com.app.singletone.ShoppingCart;
 
 public class App {
     public static void main(String[] args) {
@@ -25,6 +31,18 @@ public class App {
                 .build();
 
         System.out.println(order);
+
+
+        // Abstract Factory: Nokia products
+        // explanation of pattern
+        ElectronicsFactory nokiaFactory = new NokiaFactory();
+        Phone nokiaPhone = nokiaFactory.createPhone();
+        Laptop nokiaLaptop = nokiaFactory.createLaptop();
+        Tablet nokiaTablet = nokiaFactory.createTablet();
+
+        nokiaPhone.create();
+        nokiaLaptop.create();
+        nokiaTablet.create();
     }
 }
 
