@@ -16,4 +16,5 @@ Instead, it relies on the `FruitService`, promoting a higher level of abstractio
 
 ## Conclusion
 
-This project demonstrates the application of SOLID principles in a simple fruits management system. By following these principles, we can create more maintainable, flexible, and scalable software systems.
+This project demonstrates the application of SOLID principles in a simple fruits management system. By following these principles, 
+we can create more maintainable, flexible, and scalable software systems.
