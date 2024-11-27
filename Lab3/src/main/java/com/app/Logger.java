@@ -1,19 +1,16 @@
 package com.app;
 
 abstract class Logger {
-    public static int DEBUG = 1;
-    public static int INFO = 2;
-    public static int ERROR = 3;
 
-    protected int logLevel;
+    protected Severity logLevel;
     protected Logger nextLogger;
 
     public void setNextLogger(Logger nextLogger) {
         this.nextLogger = nextLogger;
     }
 
-    public void logMessage(int level, String message) {
-        if (this.logLevel <= level) {
+    public void logMessage(Severity level, String message) {
+        if (this.logLevel.getSeverity() <= level.getSeverity()) {
             write(message);
         }
         if (nextLogger != null) {

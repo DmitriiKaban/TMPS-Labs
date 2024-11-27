@@ -2,7 +2,7 @@ package com.app;
 
 class DebugLogger extends Logger {
     public DebugLogger() {
-        this.logLevel = DEBUG;
+        this.logLevel = Severity.DEBUG;
     }
 
     @Override

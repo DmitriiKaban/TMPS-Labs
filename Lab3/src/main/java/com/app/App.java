@@ -16,8 +16,8 @@ public class App {
         Logger loggerChain = getChainOfLoggers();
 
         System.out.println("Example log messages:");
-        loggerChain.logMessage(Logger.DEBUG, "This is a debug message.");
-        loggerChain.logMessage(Logger.INFO, "This is an info message.");
-        loggerChain.logMessage(Logger.ERROR, "This is an error message.");
+        loggerChain.logMessage(Severity.DEBUG, "This is a debug message.");
+        loggerChain.logMessage(Severity.INFO, "This is an info message.");
+        loggerChain.logMessage(Severity.ERROR, "This is an error message.");
     }
 }

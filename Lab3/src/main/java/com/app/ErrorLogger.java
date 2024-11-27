@@ -2,7 +2,7 @@ package com.app;
 
 class ErrorLogger extends Logger {
     public ErrorLogger() {
-        this.logLevel = ERROR;
+        this.logLevel = Severity.ERROR;
     }
 
     @Override

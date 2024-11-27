@@ -2,7 +2,7 @@ package com.app;
 
 class InfoLogger extends Logger {
     public InfoLogger() {
-        this.logLevel = INFO;
+        this.logLevel = Severity.INFO;
     }
 
     @Override
