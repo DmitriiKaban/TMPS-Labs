@@ -16,7 +16,7 @@ Each pattern is implemented in a separate package within the project. The implem
 The **Facade Pattern** provides a unified interface to a set of interfaces in a subsystem. It defines a higher-level interface that makes the subsystem easier to use.
 
 ### **Implementation**
-In the project, I have a class called `FootballGameFacade` that acts as a facade for the subsystems involved in a football game. The `FootballGameFacade` provides a simple interface to start, play, and end a football game, hiding the complexity of the subsystems from the client.
+In the project, I have a class called `FootballGameFacade` that acts as a facade for the subsystems involved in a football game. The `FootballGameFacade` provides a simple interface to start, play, and end a football game, hiding the complexity of the subsystems from the client. So here the 'FootballGameFacade' incapsulates `Stadium`, `Scoreboard`, and `LightingSystem` objects.
 
 ```java
 public class FootballGameFacade {
@@ -34,8 +34,7 @@ The **Composite Pattern** allows you to compose objects into tree structures to 
 
 ### **Implementation**
 
-In the project, I have a `Game` interface that defines the common operations for both leaf and composite components (name of the game and the possibility to play). The `SimpleGame` class represents the individual components (leafs), while the `CompositeGame` class represents the composite components that can contain other components.
-
+In the project, I have a `Game` interface that defines the common operations for both leaf and composite components (name of the game and the possibility to play). The `SimpleGame` class represents the individual components (leafs), while the `CompositeGame` class represents the composite components that can contain other components. 
 ```java
 public interface Game {
     void play();
@@ -43,6 +42,24 @@ public interface Game {
     void setName(String name);
 }
 ```
+
+Here is the structure of the class that represents individual components.
+
+```java
+public class SimpleGame implements Game {
+    private String name;
+    ...
+```
+
+This is a structure for the composite components as it has inside a list with `Game` instances.
+
+```java
+public class CompositeGame implements Game {
+    private String name;
+    private List<Game> games;
+    ...
+```
+
 
 
 ## 4. Adapter Pattern
